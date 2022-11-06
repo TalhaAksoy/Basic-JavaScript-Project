@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     if (parseInt(secondText.textContent) === 0 && parseInt(miniuteText.textContent) > 0)
                     {
                         miniuteText.textContent = parseInt(miniuteText.textContent) - 1;
-                        secondText.textContent = 59;
+                        secondText.textContent = 60;
                     }
                         
                 }
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     if(parseInt(miniuteText.textContent) === 0 && parseInt(hourText.textContent) > 0)
                     {
                         hourText.textContent = parseInt(hourText.textContent) - 1;
-                        miniuteText.textContent = 59;
+                        miniuteText.textContent = 60;
                     }
                 }
             }, 10);
