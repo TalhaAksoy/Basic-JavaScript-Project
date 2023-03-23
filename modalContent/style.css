@@ -1,0 +1,57 @@
+:root
+{
+    --padding-y-size:4rem;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("https://images.alphacoders.com/130/1301049.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-content{
+    width: 50%;
+    height: 20rem;
+    border:1px solid black;
+    background: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px grey;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:var(--padding-y-size);
+    padding-bottom:var(--padding-y-size);
+    text-align: center;
+}
+
+.modal-content span
+{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.modal-content button
+{
+    padding: 1rem;
+    width: 50%;
+    background: blueviolet;
+    color:white;
+    border: 1px solid #7133aa;
+    border-radius: 1rem;
+    font-weight: bold;
+}
