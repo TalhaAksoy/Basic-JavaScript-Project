@@ -1,4 +1,4 @@
-let globalColor = 'none';
+let globalColor = 'black';
 
 function attrBody(body)
 {
@@ -73,13 +73,12 @@ function attrPaintArea(body)
     const paintArea = document.createElement('div');
     paintArea.style.width = "100%";
     paintArea.style.maxHeight = "100vh";
-    paintArea.style.marginLeft = "12rem";
     paintArea.style.background = "white";
     paintArea.style.display = "flex";
     paintArea.style.flexWrap = "wrap";
     paintArea.style.justifyContent = "start";
     paintArea.style.alignContent = "start";
-    let width = body.offsetWidth - (12 * 16);
+    let width = body.offsetWidth;
     console.log(width);
     let isDragging = false;
     for (let j = 0; j < body.offsetHeight; j = j + 16)
@@ -109,13 +108,29 @@ function attrPaintArea(body)
 
 }
 
+function attrColorSelector(body)
+{
+    const colorSelector = document.createElement('input');
+    colorSelector.type = 'color';
+    colorSelector.style.position = 'absolute';
+    colorSelector.style.right = '1rem';
+    colorSelector.style.top = '1rem';
+    colorSelector.addEventListener('change', function(){
+        globalColor = colorSelector.value;
+    })
+    body.append(colorSelector);
+
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     const body = document.querySelector('body');
     const colorPalette = document.createElement('div');
 
+
     
     attrBody(body);
-    attrColorPalette(colorPalette, body);
-    attrColorDiv(colorPalette);
+    // attrColorPalette(colorPalette, body);
+    // attrColorDiv(colorPalette);
     attrPaintArea(body);
+    attrColorSelector(body);
 });
